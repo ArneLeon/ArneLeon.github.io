@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'special gothic', 'Arial', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-image: url(../images/pexels-elijahsad-3473569.jpg);
+    justify-content: center;
+    display: flex;
+    color: #333;
+}
+
+main {
+    text-align: center;
+    width: 80%;
+    height: 1000px;
+    background-color: #454444;
+}
+
+main .headlines {
+    margin: 40px 0 50px;
+}
+
+.headlines h1 {
+    font-size: 80px;
+    margin-bottom: 5px;
+    font-family: 'special gothic expanded one', 'Arial', sans-serif;
+    background: linear-gradient(to right, rgb(9, 118, 138), rgb(255, 255, 255));
+    background-clip: text;
+    color: transparent;
+    border-color: white;
+    border-width: 5px;
+}
+
+.headlines h2 {
+    font-size: 25px;
+    color: white;
+}
+
+.panel p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: white;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  background: transparent;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+  margin: auto;
+  justify-content: center;
+}
+
+.tabs h2 {
+    color: white;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 60px;
+  background: #3b3a3a;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+  border-radius: 10px 10px 0 0;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #2e2e2e;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #2e2e2e;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
