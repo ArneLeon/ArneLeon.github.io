@@ -12,31 +12,40 @@
 
 <body>
 <header>
-
+<nav>
+  <p><a href="#start">Start</a></p>
+    <div>
+    <ul>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#aboutMe">Über mich</a></li>
+    </ul>
+    <form>
+      <select name="language" id="language">
+        <option value="german">German</option>
+        <option value="english">English</option>
+      </select>
+    </form>
+    <button class="mode">Mode</button>
+    </div>
+  </nav>
 </header>
 <main>
-  <div class="headlines">
-  <h1>Portfolio</h1>
-  <h2>von Arne Schwegeler</h2>
+  <div class="mainLeft">
+    <div class="mainContentLeft">
+    <div class="headlines">
+      <h1>Arne Schwegeler</h1>
+      <h2>Frontend-Developer & Data Scientist</h2>
+      <h3>Auf dem Weg zum Fullstack-Developer</h3>
+      </div>
+    </div>
   </div>
 
-  <div class="tabs">
-    <input class="input" name="tabs" type="radio" id="projects" checked="checked"/>
-    <label class="label" for="projects">Projekte</label>
-    <div class="panel">
-      <h2>Arlina Design</h2>
-      <p>Arlina Design (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae</p>
-      <p>The fruit of the Citrus × sinensis is considered a sweet orange, whereas the fruit of the Citrus × aurantium is considered a bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony); varieties of sweet orange arise through mutations.</p>
-    </div>
+  <div class="mainRight">
+    <div class="mainContentRight">
 
-    <input class="input" name="tabs" type="radio" id="aboutMe"/>
-    <label class="label" for="aboutMe">Über mich</label>
-    <div class="panel">
-      <h2>Idntheme</h2>
-      <p>Idntheme (Citrus tangerina) is an orange-colored citrus fruit that is closely related to, or possibly a type of, mandarin orange (Citrus reticulata).</p>
-      <p>The name was first used for fruit coming from Tangier, Morocco, described as a mandarin variety. Under the Tanaka classification system, Citrus tangerina is considered a separate species.</p>
     </div>
   
+  </div>
 </main>
 <footer>
 
