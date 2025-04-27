@@ -1,22 +1,28 @@
 let lightmode = localStorage.getItem('lightmode');
-let lightBackground = document.getElementById('lightmode');
-let darkBackground = document.getElementById('darkmode');
-let spinner = document.querySelector('.spinner');
+let background = document.querySelector('.background');
+let sun = document.querySelector('.sun');
+let moon = document.querySelector('.moon');
+let earth = document.querySelector('.earth');
+let landscape = document.querySelector('.landscape');
 
 const enableLightmode = () => {
     document.body.classList.add('lightmode');
     localStorage.setItem('lightmode', 'active');
-    spinner.setAttribute('id', 'spin');
-    darkBackground.style.opacity = 0;
-    lightBackground.style.opacity = 1;
+    moon.setAttribute('id', 'spin');
+    sun.setAttribute('id', 'spin');
+    background.setAttribute('id', 'lightmode');
+    earth.setAttribute('id', 'earthDay');
+    landscape.removeAttribute('id', 'landscapeNight');
 };
 
 const disableLightmode = () => {
     document.body.classList.remove('lightmode');
     localStorage.setItem('lightmode', null);
-    spinner.removeAttribute('id', 'spin');
-    lightBackground.style.opacity = 0;
-    darkBackground.style.opacity = 1;
+    moon.removeAttribute('id', 'spin');
+    sun.removeAttribute('id', 'spin');
+    background.removeAttribute('id', 'lightmode');
+    earth.removeAttribute('id', 'earthDay');
+    landscape.setAttribute('id', 'landscapeNight');
 };
 
 if (lightmode === 'active') {
