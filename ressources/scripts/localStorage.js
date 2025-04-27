@@ -12,7 +12,7 @@ const enableLightmode = () => {
     sun.setAttribute('id', 'spin');
     background.setAttribute('id', 'lightmode');
     earth.setAttribute('id', 'earthDay');
-    landscape.removeAttribute('id', 'landscapeNight');
+    landscape.setAttribute('id', 'landscapeDay');
 };
 
 const disableLightmode = () => {
@@ -22,7 +22,7 @@ const disableLightmode = () => {
     sun.removeAttribute('id', 'spin');
     background.removeAttribute('id', 'lightmode');
     earth.removeAttribute('id', 'earthDay');
-    landscape.setAttribute('id', 'landscapeNight');
+    landscape.removeAttribute('id', 'landscapeDay');
 };
 
 if (lightmode === 'active') {

@@ -51,6 +51,7 @@ body {
   width: auto;
   bottom: -15rem;
   right: -10rem;
+  z-index: 1;
   filter: drop-shadow(0 0 20px rgb(121, 121, 231)) blur(0.5px);
   transition: bottom 2s, right 2s;
 }
@@ -64,14 +65,14 @@ body {
   position: fixed;
   height: auto;
   width: 120rem;
-  z-index: 10;
+  z-index: 1;
   left: 0;
-  bottom: -20rem;
+  bottom: -100rem;
   transition: bottom 2s;
   filter: drop-shadow(0 0 100px white) blur(0.5px);
 }
-.landscape#landscapeNight {
-  bottom: -100rem;
+.landscape#landscapeDay {
+  bottom: -30rem;
   transition: bottom 2s;
 }
 
@@ -255,7 +256,7 @@ main {
 
 .mainContentLeft {
   margin: 5rem 2rem 0 5rem;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
 }
 
