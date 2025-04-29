@@ -1,6 +1,7 @@
 :root {
-  --backgroundColor: #0b0c10;
-  --secondBackgroundColor: #1f2833;
+  --backgroundColor: #1a1c24;
+  --secondBackgroundColor: #252d35;
+  --baseColor: #474b97;
   --textColor: #c5c6c7;
   --headlinesColor: #66fcf1;
   --subHeadlinesColor: #45a29e;
@@ -18,123 +19,16 @@
     padding: 0;
     margin: 0;
     font-size: 16px;
-    font-family: 'special gothic', 'Arial', sans-serif;
+    font-family: 'Roboto Condensed', 'Arial', sans-serif;
     z-index: 2;
 }
 
 body {
   width: 100%;
   background-color: var(--backgroundColor);
-}
-
-.background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-image: url(/ressources/images/pexels-kaip-1341279.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: 2s;
-  z-index: 0;
-}
-
-.background#lightmode {
-  background-image: url(/ressources/images/pexels-francesco-ungaro-281260.jpg);
-  transition: 2s;
-  z-index: 0;
-}
-
-.earth {
-  position: fixed;
-  height: 50rem;
-  width: auto;
-  bottom: -15rem;
-  right: -10rem;
-  z-index: 1;
-  filter: drop-shadow(0 0 20px rgb(121, 121, 231)) blur(0.5px);
-  transition: bottom 2s, right 2s;
-}
-.earth#earthDay {
-  bottom: -100rem;
-  right: -100rem;
-  transition: bottom 2s, right 2s;
-}
-
-.landscape {
-  position: fixed;
-  height: auto;
-  width: 120rem;
-  z-index: 1;
-  left: 0;
-  bottom: -100rem;
-  transition: bottom 2s;
-  filter: drop-shadow(0 0 100px white) blur(0.5px);
-}
-.landscape#landscapeDay {
-  bottom: -30rem;
-  transition: bottom 2s;
-}
-
-.moon {
-  position: absolute;
-  width: 150px;
-  animation: moonGlowing 6s infinite;
-  z-index: 1;
-  top: 1rem;
-  left: 12rem;
-  transition: 2s;
-  z-index: 1;
-}
-
-.moon#spin {
-  top: 50rem;
-  left: -100rem;
-}
-
-@keyframes moonGlowing {
-  0% {
-    filter: drop-shadow(0 0 15px white);
-  }
-  50% {
-    filter: drop-shadow(0 0 20px white);
-  }
-  100% {
-    filter: drop-shadow(0 0 15px white);
-  }
-}
-
-.sun {
-  width: 50px;
-  height: 50px;
-  margin: 26px;
-  margin-left: 50px;
-  background-color: #ffba18;
-  border-radius: 50%;
-  filter: blur(3px);
-  animation: sunGlowing 6s infinite;
-  position: absolute;
-  z-index: 1;
-  top: -30rem;
-  left: 150rem;
-  transition: 2s;
-}
-
-.sun#spin {
-  top: 1rem;
-  left: 12rem;
-}
-
-@keyframes sunGlowing {
-  0% {
-    box-shadow: 0 0 10px orange, 0 0 20px orange;
-  }
-  50% {
-    box-shadow: 0 0 35px orange, 0 0 35px orange;
-  }
-  100% {
-    box-shadow: 0 0 10px orange, 0 0 20px orange;
-  }
+  background-image: radial-gradient(var(--secondBackgroundColor), var(--backgroundColor));
+  display: flex;
+  justify-content: center;
 }
 
 header {
@@ -144,7 +38,7 @@ header {
   height: 82px;
   display: flex;
   justify-content: center;
-  z-index: 3;
+  z-index: 5;
 }
 
 nav {
@@ -171,6 +65,7 @@ nav ul {
   display: flex;
   gap: 1rem;
   margin-right: 2rem;
+  z-index: 5;
 }
 
 nav li {
@@ -223,18 +118,32 @@ header #language {
 main {
   position: relative;
   top: 82px;
+  width: 90%;
 }
 
 .mainLeft {
   position: fixed;
-  top: 50px;
   float: left;
-  width: 40%;
+  width: 35%;
+  height: 80%;
+}
+
+.mainContentLeft {
+  width: 90%;
+  float: right;
+  margin-top: 2rem;
+}
+
+.mainContentLeft .headlines {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 .mainContentLeft h1 {
-  font-family: "special gothic expanded one";
-  font-size: 2rem;
+  font-family: "Noto Serif";
+  font-size: 2.5rem;
   color: var(--headlinesColor);
   margin-bottom: 1rem;
 }
@@ -249,18 +158,158 @@ main {
   color: var(--subHeadlinesColor);
 }
 
+.mainContentLeft .skillBanner {
+  width: 100%;
+  height: auto;
+}
+
+.mainContentLeft .skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 9rem);
+  grid-template-rows: repeat(auto);
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.mainContentLeft input {
+  display: none;
+  position: absolute;
+}
+
+.mainContentLeft label {
+  background-color: var(--textColor);
+  padding: 8px 12px;
+  border-radius: 15px;
+  border: transparent 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "special gothic expanded one";
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: aliceblue;
+}
+
+input:checked + label {
+  border: #4786d8 solid 3px;
+}
+
+.mainContentLeft label:hover {
+  transform: scale(1.1);
+}
+
+.mainContentLeft .javascript {
+  background-color: yellow;
+}
+
+.mainContentLeft .javascript svg {
+  transform: scale(2);
+  fill: black;
+}
+
+.mainContentLeft .html {
+  background-color: orange;
+}
+
+.mainContentLeft .html svg {
+  height: 24px;
+  width: 24px;
+  transform: scale(1.2);
+}
+
+.mainContentLeft .css {
+  background-color: #6f8efc;
+}
+
+.mainContentLeft .css svg {
+  transform: scale(1.5);
+}
+
+.mainContentLeft .python {
+  background-color: #474b97;
+  color: antiquewhite;
+}
+
+.mainContentLeft .python svg {
+  transform: scale(1.5);
+}
+
+.mainContentLeft .pandas {
+  background-color: gray;
+}
+
+.mainContentLeft .pandas svg {
+  transform: scale(1.3);
+}
+
+.mainContentLeft .numpy {
+  background-color: #2d3948;
+  color: antiquewhite;
+}
+
+.mainContentLeft .numpy svg {
+  transform: scale(1.4);
+}
+
+.mainContentLeft .matplotlib {
+  background-color: rgb(176, 120, 15);
+}
+
+.mainContentLeft .matplotlib svg {
+  height: 24px;
+  width: 24px;
+  transform: scale(1.3);
+}
+
+.mainContentLeft .keras svg {
+  transform: scale(1.6);
+  fill: red;
+}
+
+.mainContentLeft .tensorflow {
+  background-color: saddlebrown;
+}
+
+.mainContentLeft .tensorflow svg {
+  transform: scale(1.2);
+}
+
+.mainContentLeft .sql {
+  background-color: rgb(255, 128, 0);
+}
+
+.mainContentLeft .sql svg {
+  transform: scale(1.5);
+  fill: black;
+}
+
+.mainContentLeft .neo4j {
+  background-color: rosybrown;
+}
+
+.mainContentLeft .neo4j svg {
+  height: 24px;
+  width: 24px;
+  transform: scale(1.2);
+}
+
+.mainContentLeft .synera svg {
+  height: 24px;
+  width: 24px;
+  transform: scale(5);
+  pointer-events: none;
+}
+ 
 .mainRight {
-  width: 60%;
+  width: 55%;
   float: right;
 }
 
-.mainContentLeft {
-  margin: 5rem 2rem 0 5rem;
-  z-index: 3;
-  overflow: hidden;
-}
-
 .mainContentRight {
-  margin: 5rem 5rem 0 2 rem;
+  width: 90%;
+  float: left;
+  margin-top: 2rem;
   height: 2000px;
 }
