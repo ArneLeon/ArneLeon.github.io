@@ -104,6 +104,10 @@ header #language {
   align-items: center;
 }
 
+#themeSwitch:hover {
+  box-shadow: 0 0 10px yellow;
+}
+
 #themeSwitch svg {
   fill: var(--textColor);
 }
@@ -386,4 +390,9 @@ input:checked + label {
   background-color: var(--skillsBackground);
   margin-left: 0;
   line-height: 1.5;
+}
+
+
+#englishText {
+  display: none;
 }

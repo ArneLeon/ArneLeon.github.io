@@ -20,11 +20,13 @@
   <p><a href="#">Start</a></p>
     <div>
     <ul>
-      <li><a href="#projects">Projekte</a></li>
-      <li><a href="#aboutMe">Über mich</a></li>
+      <li id="germanText"><a href="#projects">Projekte</a></li>
+      <li id="germanText"><a href="#aboutMe">Über mich</a></li>
+      <li id="englishText"><a href="#projects">Projects</a></li>
+      <li id="englishText"><a href="#aboutMe">About me</a></li>
     </ul>
     <form>
-      <select name="language" id="language">
+      <select name="language" id="language" onchange="switchLanguage()">
         <option value="german">German</option>
         <option value="english">English</option>
       </select>
@@ -42,10 +44,12 @@
       <div class="headlines">
         <h1>Arne Schwegeler</h1>
         <h2>Frontend-Developer & Data Scientist</h2>
-        <h3>Auf dem Weg zum Fullstack-Developer</h3>
+        <h3 id="germanText">Auf dem Weg zum Full-Stack-Developer</h3>
+        <h3 id="englishText">On the way to becoming a Full-Stack-Developer</h3>
       </div>
       <div class="skills">
-        <h2>Meine Fähigkeiten</h2>
+        <h2 id="germanText">Meine Fähigkeiten</h2>
+        <h2 id="englishText">My Skills</h2>
         <input type="checkbox" name="javascript" id="javascript">
         <label class="javascript" for="javascript">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z"/></svg>Javascript
@@ -159,20 +163,26 @@
 
 
       <div class="mainText">
-        <p>Hier steht am Ende ein ganz besonderer Text!</p>
+        <p id="germanText">Hier steht am Ende ein ganz besonderer Text!</p>
+        <p id="englishText">Here is a very special text at the end!</p>
       </div>
 
 
       <div class="projectsChapter" id="projects">
-        <h2>Meine Projekte</h2>
+        <h2 id="germanText">Meine Projekte</h2>
+        <h2 id="englishText">My Projects</h2>
         <a href="https://github.com/ArneLeon/ArneLeon.github.io" target="_blank">
         <div class="project">
           <img src="" alt="">
           <div class="projectDetails">
             <h3>Portfolio</h3>
-            <p>Das Portfolio hier selbst habe ich vollständig und alleine in <strong>HTML</strong>, <strong>CSS</strong> und <strong>Javascript</strong> geschrieben.
+            <p id="germanText">Das Portfolio hier selbst habe ich vollständig und alleine in <strong>HTML</strong>, <strong>CSS</strong> und <strong>Javascript</strong> geschrieben.
               Dabei sollte es meine Fähigkeiten als Entwickler, alle meine auf Github veröffentlichten Projekte, sowie mein bisherigen Berufsweg wiederspiegeln.
               Da ich auf meinem Weg, ein Fullstack Developer zu werden, möglichst viel lernen möchte, habe ich bei der Erstellung dieser Website auf Hilfsmittel, wie Figma oder Wordpress, verzichtet.
+            </p>
+            <p id="englishText">I wrote this portfolio completely and solely in <strong>HTML</strong>, <strong>CSS</strong> and <strong>Javascript</strong>. 
+              It should reflect my skills as a developer, all my projects published on Github, as well as my career path so far. 
+              Since I want to learn as much as possible on my way to becoming a fullstack developer, I didn't use any tools like Figma or Wordpress when creating this website.
             </p>
             <div class="stationSkills">
               <ul>
@@ -188,13 +198,15 @@
 
 
       <div class="aboutMeChapter" id="aboutMe">
-        <h2>Berufserfahrung</h2>
+        <h2 id="germanText">Berufserfahrung</h2>
+        <h2 id="englishText">Work Experience</h2>
         <a href="https://rle.international/de/rle-deutschland-de/" target="_blank">
 
         <div class="station">
           <h4>10/2023 – 08/2024</h4>
           <div class="stationDetails">
-            <h3>Junior Projektingenieur</h3>
+            <h3 id="germanText">Junior Projektingenieur</h3>
+            <h3 id="englishText">Junior Project Engineer</h3>
             <h4>RLE Mobility GmbH & Co. KG</h4>
             <p>Strukturierung und Verarbeitung komplexer Datenformen der Software Synera.
               Mehrere erfolgreich abgeschlossene Kundenprojekte:
@@ -230,7 +242,8 @@
         <div class="station">
           <h4>01/2022 – 09/2023</h4>
           <div class="stationDetails">
-            <h3>Dualer Student im Bereich Data Science</h3>
+            <h3 id="germanText">Dualer Student im Bereich Data Science</h3>
+            <h3 id="englishText">Dual student of Data Science</h3>
             <h4>RLE International Group</h4>
             <p>
               Unterstützende Mitarbeit im Team bei verschiedenen Projekten. Darunter:
@@ -272,7 +285,8 @@
         <div class="station">
           <h4>10/2020 – 10/2021</h4>
           <div class="stationDetails">
-            <h3>Dualer Student im Bereich Software Engineering</h3>
+            <h3 id="germanText">Dualer Student im Bereich Software Engineering</h3>
+            <h3 id="englishText">Dual student of Software Engineering</h3>
             <h4>Clavis Berater Sozietät Unternehmensberatung GmbH</h4>
             <p>
               Anlernung zum Softwareentwickler mit SAP-Technologie sowie Absolvierung
@@ -302,17 +316,23 @@
         </div>
         </a>
 
-        <h2>Bildungsweg</h2>
+        <h2 id="germanText">Bildungsweg</h2>
+        <h2 id="englishText">Educational Pathway</h2>
         
         <a href="https://www.fhdw.de/" target="_blank">
           <div class="station">
             <h4>10/2020 – 09/2023</h4>
             <div class="stationDetails">
-              <h3>Bachelor of Science in Wirtschaftsinformatik</h3>
-              <h4>Fachhochschule der Wirtschaft</h4>
-              <p>Schwerpunkt: Data Science <br>
+              <h3 id="germanText">Bachelor of Science in Wirtschaftsinformatik</h3>
+              <h3 id="englishText">Bachelor of Science in Business Informatics</h3>
+              <h4 id="germanText">Fachhochschule der Wirtschaft</h4>
+              <h4 id="englishText">Fachhochschule der Wirtschaft (University of Applied Sciences for Business)</h4>
+              <p id="germanText">Schwerpunkt: Data Science <br>
                 Erfolgreich absolviert
               </p>
+              <p id="englishText">Focus: Data Science <br>
+              Successfully completed
+            </p>
               <div class="stationSkills">
                 <ul>
                   <li>Python</li>
@@ -332,17 +352,24 @@
             <div class="station">
               <h4>2018-07/2020</h4>
               <div class="stationDetails">
-                <h3>Abitur</h3>
-                <h4>Gymnasium Lechenich</h4>
-                <p>
+                <h3 id="germanText">Abitur</h3>
+                <h3 id="englishText">High school diploma</h3>
+                <h4 id="germanText">Gymnasium Lechenich</h4>
+                <h4 id="englishText">Gymnasium Lechenich (Grammar school)</h4>
+                <p id="germanText">
                   Erfolgreich absolviert
                 </p>
+                <p id="englishText">Successfully completed</p>
                 <div class="stationSkills">
                   <ul>
-                    <li>Deutsch</li>
-                    <li>Englisch</li>
-                    <li>Mathematik</li>
-                    <li>Sonstige Schulfächer</li>
+                    <li id="germanText">Deutsch</li>
+                    <li id="germanText">Englisch</li>
+                    <li id="germanText">Mathematik</li>
+                    <li id="germanText">Sonstige Schulfächer</li>
+                    <li id="englishText">German</li>
+                    <li id="englishText">English</li>
+                    <li id="englishText">Mathematics</li>
+                    <li id="englishText">Other school subjects</li>
                   </ul>
                 </div>
               </div>
