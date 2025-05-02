@@ -108,6 +108,10 @@ header #language {
   box-shadow: 0 0 10px yellow;
 }
 
+.lightmode #themeSwitch:hover {
+  box-shadow: 0 0 10px black;
+}
+
 #themeSwitch svg {
   fill: var(--textColor);
 }
