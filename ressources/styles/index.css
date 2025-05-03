@@ -330,13 +330,19 @@ input:checked + label {
   margin: 1rem;
 }
 
-.mainContentRight .mainText, .mainContentRight .projectsChapter, .mainContentRight .aboutMeChapter {
+.mainContentRight .mainText, .mainContentRight .projectsChapter, .mainContentRight .aboutMeChapter, .mainTextPhone {
   margin-bottom: 6rem;
 }
 
 .mainContentRight p {
   color: var(--textColor);
   line-height: 1.5rem;
+}
+
+.mainTextPhone {
+  color: var(--textColor);
+  line-height: 1.5rem;
+  margin-top: 4rem;
 }
 
 .mainContentRight h2 {
@@ -396,6 +402,10 @@ input:checked + label {
   line-height: 1.5;
 }
 
+.mainTextPhone {
+  display: none;
+}
+
 
 #englishText {
   display: none;
@@ -442,6 +452,12 @@ input:checked + label {
     display: none;
   }
   .mainContentRight .project, .mainContentRight .station {
+    display: block;
+  }
+  .mainText {
+    display: none;
+  }
+  .mainTextPhone {
     display: block;
   }
 }
