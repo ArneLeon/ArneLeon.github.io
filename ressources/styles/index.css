@@ -411,4 +411,7 @@ input:checked + label {
   .mainText {
     margin-top: 5rem;
   }
+  nav li {
+    font-size: 1rem;
+  }
 }
