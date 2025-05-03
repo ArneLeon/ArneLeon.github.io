@@ -404,6 +404,7 @@ input:checked + label {
 @media only screen and (max-width: 700px) {
   main {
     display: block;
+    top: 7rem;
   }
   .mainLeft {
     position: static;
@@ -411,21 +412,24 @@ input:checked + label {
   .mainText {
     margin-top: 5rem;
   }
+  header {
+    height: 4rem;
+  }
   nav {
-    gap: 0.7rem;
+    gap: 0.5rem;
   }
   nav div {
-    gap: 0.7rem;
+    gap: 0.5rem;
   }
   nav li {
-    font-size: 0.9rem;
-    gap: 0.7rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
   }
   header a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   nav div {
-    gap: 0.7rem;
+    gap: 0.5rem;
   }
   #themeSwitch {
     height: 2.5rem;
