@@ -421,6 +421,9 @@ input:checked + label {
   nav div {
     gap: 0.5rem;
   }
+  nav ul {
+    margin-right: 0.2rem;
+  }
   nav li {
     font-size: 0.8rem;
     gap: 0.5rem;
