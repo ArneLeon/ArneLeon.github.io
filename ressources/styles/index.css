@@ -435,11 +435,11 @@ input:checked + label {
     margin-right: 0.2rem;
   }
   nav li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     gap: 0.5rem;
   }
   header a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   nav div {
     gap: 0.5rem;
