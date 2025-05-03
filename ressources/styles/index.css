@@ -417,9 +417,6 @@ input:checked + label {
   nav div {
     gap: 0.7rem;
   }
-  nav ul {
-    margin-right: 0.3rem;
-  }
   nav li {
     font-size: 0.9rem;
     gap: 0.7rem;
@@ -428,7 +425,7 @@ input:checked + label {
     font-size: 0.9rem;
   }
   nav div {
-    gap: 0.5rem;
+    gap: 0.7rem;
   }
   #themeSwitch {
     height: 2.5rem;
