@@ -411,7 +411,16 @@ input:checked + label {
   .mainText {
     margin-top: 5rem;
   }
+  nav {
+    gap: 0.5rem;
+  }
   nav li {
     font-size: 1rem;
+  }
+  header a {
+    font-size: 1rem;
+  }
+  nav div {
+    gap: 0.5rem;
   }
 }
