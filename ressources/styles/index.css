@@ -400,3 +400,15 @@ input:checked + label {
 #englishText {
   display: none;
 }
+
+@media only screen and (max-width: 600px) {
+  main {
+    display: block;
+  }
+  .mainLeft {
+    position: static;
+  }
+  .mainText {
+    margin-top: 5rem;
+  }
+}
