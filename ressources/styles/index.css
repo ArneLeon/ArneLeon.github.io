@@ -348,8 +348,6 @@ input:checked + label {
   line-height: 1.5rem;
   margin-top: 4rem;
   display: none;
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .mainContentRight h2 {
@@ -471,8 +469,5 @@ input:checked + label {
   }
   .mainTextPhone {
     display: block;
-  }
-  .headlines {
-    margin-left: 2rem;
   }
 }
