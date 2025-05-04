@@ -348,6 +348,8 @@ input:checked + label {
   line-height: 1.5rem;
   margin-top: 4rem;
   display: none;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mainContentRight h2 {
@@ -361,6 +363,15 @@ input:checked + label {
   border: transparent solid 1px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mainContentRight .project img {
+  width: 90%;
+  height: auto;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--textColor);
+  border-radius: 10px;
 }
 
 .mainContentRight .project:hover, .mainContentRight .station:hover {
@@ -460,5 +471,8 @@ input:checked + label {
   }
   .mainTextPhone {
     display: block;
+  }
+  .headlines {
+    margin-left: 2rem;
   }
 }
