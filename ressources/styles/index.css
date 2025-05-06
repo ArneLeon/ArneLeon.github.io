@@ -294,6 +294,15 @@ input:checked + label {
   transform: scale(1.2);
 }
 
+.mainContentLeft .scikit {
+  background-color: cyan;
+}
+
+.mainContentLeft .scikit svg {
+  height: 24px;
+  width: auto;
+}
+
 .mainContentLeft .sql {
   background-color: rgb(255, 128, 0);
 }
@@ -357,14 +366,12 @@ input:checked + label {
   display: grid;
   grid-template-columns: 2fr 5fr;
   padding: 1rem;
-  border: transparent solid 1px;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .mainContentRight .project img {
   width: 90%;
-  height: auto;
   margin-top: 2rem;
   margin-right: 0.5rem;
   border: 1px solid var(--textColor);
