@@ -40,7 +40,7 @@ header {
   display: flex;
   justify-content: center;
   z-index: 5;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(7px);
 }
 
 nav {
@@ -281,6 +281,11 @@ input:checked + label {
   transform: scale(1.3);
 }
 
+.mainContentLeft .pyspark {
+  background-color:#1a1c24;
+  color: antiquewhite;
+}
+
 .mainContentLeft .keras svg {
   transform: scale(1.6);
   fill: red;
@@ -320,6 +325,17 @@ input:checked + label {
   height: 24px;
   width: 24px;
   transform: scale(1.2);
+}
+
+.mainContentLeft .azure {
+  background-color: #1e2132;
+  color: antiquewhite;
+}
+
+.mainContentLeft .aws svg {
+  height: 24px;
+  width: 24px;
+  transform: scale(1.8);
 }
 
 .mainContentLeft .synera svg {
